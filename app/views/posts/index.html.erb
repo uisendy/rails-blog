@@ -14,7 +14,7 @@
             <%= render 'shared/post_info', post: post, post_no: post_no %>
             <div class="comments">
               <% post.comments.each do |comment| %>
-                <%= render 'shared/comment', username: comment.author.name, comment: comment.text %>
+                <%= render 'shared/comment', comment: comment %>
               <% end %>
             </div>
           </div>
