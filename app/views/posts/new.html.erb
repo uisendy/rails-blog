@@ -1,0 +1,7 @@
+<%= form_with model: @post, url: user_posts_path, class: "add-post" do |form| %>
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+  <%= form.label :Write_your_post %>
+  <%= form.text_area :text%>
+  <%= form.submit "Create post", disable_with: 'Submiting...', class: "btn" %>
+<% end %>
