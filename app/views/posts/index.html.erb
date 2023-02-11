@@ -11,9 +11,9 @@
       <div class="posts-comments">
         <% @posts.each_with_index do |post, post_no| %>
           <div class="post-comments">
-            <%= render 'shared/post_info', post: post, post_no: post_no %>
+              <%= render 'shared/post_info', post: post, post_no: post_no, user: @user %>
             <div class="comments">
-              <% post.comments.each do |comment| %>
+              <% post.recent_comments.each do |comment| %>
                 <%= render 'shared/comment', comment: comment %>
               <% end %>
             </div>
