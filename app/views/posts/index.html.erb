@@ -6,6 +6,21 @@
   </head>
 
   <body>
-    <h1>This is a list of posts</h1>
+    <div class="root-container posts-comments-container">
+      <%= render 'shared/user_info', user: @user %>
+      <div class="posts-comments">
+        <% @posts.each_with_index do |post, post_no| %>
+          <div class="post-comments">
+            <%= render 'shared/post_info', post: post, post_no: post_no %>
+            <div class="comments">
+              <% post.comments.each do |comment| %>
+                <%= render 'shared/comment', username: comment.author.name, comment: comment.text %>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+        <button class="btn">Pagination</button>
+      </div>
+    </div>
   </body>
 </html>
