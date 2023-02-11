@@ -6,6 +6,18 @@
   </head>
 
   <body>
-    <h1>This is a detail about some user</h1>
+    <div class="root-container user-container">
+      <%= render 'shared/user_info', user: @user %>
+      <div class="bio-container">
+        <h3>Bio</h3>
+        <p class="bio"> <%=@user.bio%> </p>
+      </div>
+      <div class="posts">
+        <% @user.posts.each_with_index do |post, post_no| %>
+          <%= render 'shared/post_info', post: post, post_no: post_no %>
+        <%end%>
+        <button class="btn">See all posts</button>
+      </div>
+    </div>
   </body>
 </html>
