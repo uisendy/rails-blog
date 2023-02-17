@@ -1,27 +1,19 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  </head>
-
-  <body>
-    <div class="root-container posts-comments-container">
-      <%= render 'shared/user_info', user: @user %>
-      <div class="posts-comments">
-        <% @posts.each_with_index do |post, post_no| %>
-          <div class="post-comments">
-              <%= render 'shared/post_info', post: post, post_no: post_no, user: @user %>
-            <div class="comments">
-              <% post.recent_comments.each do |comment| %>
-                <%= render 'shared/comment', comment: comment %>
-              <% end %>
-              <button class="btn add-comment-btn"><%= link_to 'Add comment', new_user_post_comment_path(@user, post) %></button>
-            </div>
+<section>
+  <div class="root-container posts-comments-container">
+    <%= render 'shared/user_info', user: @user %>
+    <div class="posts-comments">
+      <% @posts.each_with_index do |post, post_no| %>
+        <div class="post-comments">
+            <%= render 'shared/post_info', post: post, post_no: post_no, user: @user %>
+          <div class="comments">
+            <% post.recent_comments.each do |comment| %>
+              <%= render 'shared/comment', comment: comment %>
+            <% end %>
+            <button class="btn add-comment-btn"><%= link_to 'Add comment', new_user_post_comment_path(@user, post) %></button>
           </div>
-        <% end %>
-        <button class="btn">Pagination</button>
-      </div>
+        </div>
+      <% end %>
+      <button class="btn">Pagination</button>
     </div>
-  </body>
-</html>
+  </div>
+</section>
