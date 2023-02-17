@@ -156,6 +156,7 @@ Example:
 - GitHub: [@AbelG101](https://github.com/uisendy)
 - LinkedIn: [sendyinieke](https://www.linkedin.com/in/sendyinieke/)
 
+<<<<<<< HEAD
 👤 **Daphine Atim**
 
 - GitHub: @Daphineatim
@@ -163,12 +164,19 @@ Example:
 - Twitter: @dhaphyn
 
 - LinkedIn: DaphineAtim
+=======
+👤 **Masouma Modarresi**
+
+  - GitHub: [Masouma](https://github.com/Masouma864)
+  - LinkedIn: [Masouma](linkedin.com/in/masouma-modarresi/)
+>>>>>>> a09885c047304d33f13cde5ebf7f3c602dfc5abe
 
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **[Provide live demo]**
 - [ ] **[Multi blogging option]**
 - [ ] **[Viewers analytics based on location]**
+- [ ] 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
