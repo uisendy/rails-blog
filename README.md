@@ -156,6 +156,14 @@ Example:
 - GitHub: [@AbelG101](https://github.com/uisendy)
 - LinkedIn: [sendyinieke](https://www.linkedin.com/in/sendyinieke/)
 
+👤 **Daphine Atim**
+
+- GitHub: @Daphineatim
+
+- Twitter: @dhaphyn
+
+- LinkedIn: DaphineAtim
+
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **[Provide live demo]**
