@@ -1,8 +1,8 @@
 <%= link_to user_post_path(user, post) do %>
   <div class="post">
     <div class="content">
-      <h3>Post #<%= post_no+1 %> </h3>
-      <p> <%= post.title %> </p>
+      <h3><%= post.title %></h3>
+      <p> <%= post.text.truncate_words(5) %> </p>
     </div>
     <div class="comments-likes">
       <div class="like-comment-btn">
