@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.feature 'Users', type: :feature do
   before(:each) do
-    @user = User.create(name: 'David',
+    @user = User.create(name: 'Inieke',
                         photo: 'https://somepic.potraits/5158',
-                        bio: 'Developer')
+                        bio: 'Software Developer')
     @first_post = Post.create(author: @user, title: 'Hello, one', text: 'This is my first post')
     @second_post = Post.create(author: @user, title: 'Hello, two', text: 'This is my second post')
     @third_post = Post.create(author: @user, title: 'Hello, three', text: 'This is my third post')
@@ -20,7 +20,7 @@ RSpec.feature 'Users', type: :feature do
       visit users_path
     end
     it 'should show username for each user' do
-      expect(page).to have_content('David')
+      expect(page).to have_content('Inieke')
       expect(page).to have_content('Bill Gates')
     end
 
@@ -48,7 +48,7 @@ RSpec.feature 'Users', type: :feature do
       expect(page.body).to include('https://somepic.potraits/5158')
     end
     it 'should show username' do
-      expect(page).to have_content('David')
+      expect(page).to have_content('Inieke')
     end
 
     it 'should show the number of posts the user' do
@@ -56,7 +56,7 @@ RSpec.feature 'Users', type: :feature do
     end
 
     it "should show the user's bio" do
-      expect(page).to have_content('Developer')
+      expect(page).to have_content('Software Developer')
     end
 
     it "should show the user's first 3 posts" do
