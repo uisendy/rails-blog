@@ -6,6 +6,19 @@
   </head>
 
   <body>
-    <h1>This is some post by a user</h1>
+    <div class="root-container post-detail-container">
+      <div class="post-header">
+        <div class="user-name"><%= @post.title %> by: <%=@post.author.name%></div>
+        <div class="comments-likes">Comments: <%=@post.comments_counter%>, Likes: <%=@post.likes_counter%></div>
+      </div>
+      <div class="post-detail">
+        <%=@post.text%>
+      </div>
+      <div class="comments">
+        <% @post.recent_comments.each do |comment| %>
+          <%= render 'shared/comment', comment: comment %>
+        <% end %>
+      </div>
+    </div>
   </body>
 </html>
