@@ -16,6 +16,7 @@
               <% post.recent_comments.each do |comment| %>
                 <%= render 'shared/comment', comment: comment %>
               <% end %>
+              <button class="btn add-comment-btn"><%= link_to 'Add comment', new_user_post_comment_path(@user, post) %></button>
             </div>
           </div>
         <% end %>
